@@ -36,6 +36,7 @@ class MonAnnotationView: MKAnnotationView {
         
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         button.setImage(UIImage(named: "distance"), for: .normal)
+        button.addTarget(self, action: #selector(gps), for: .touchUpInside)
         return button
         
     }
@@ -44,14 +45,33 @@ class MonAnnotationView: MKAnnotationView {
         
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         button.setImage(UIImage(named: "detail"), for: .normal)
+        button.addTarget(self, action: #selector(detail), for: .touchUpInside)
         return button
     }
     
-    func setupCenter() -> UIView {
+    func setupCenter() -> UIView? {
         
+        guard let anno = annotation as? MonAnnotation else {return nil}
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 125, height: 125))
-        view.backgroundColor = .red
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 125).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 125).isActive = true
+        let imageView = UIImageView(frame: view.bounds)
+        imageView.image = anno.calanque.image
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        view.addSubview(imageView)
         return view
+    }
+    
+    @objc func detail() {
+        
+        
+    }
+    
+    @objc func gps() {
+        
     }
 
 
