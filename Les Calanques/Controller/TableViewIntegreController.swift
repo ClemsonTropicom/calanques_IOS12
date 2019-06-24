@@ -8,6 +8,8 @@
 
 import UIKit
 
+let segueId = "detail"
+
 class TableViewIntegreController: UITableViewController {
 
     var calanques: [Calanque] = []
@@ -61,6 +63,18 @@ class TableViewIntegreController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueId, sender: calanques[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueId {
+            if let vc = segue.destination as? DetailController {
+                vc.calanqueRecue = sender as? Calanque
+            }
+        }
     }
 
     /*
