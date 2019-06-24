@@ -302,18 +302,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="99.5" y="477.5" width="215" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LyN-a2-Obz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fQD-aj-hpL">
+                                <rect key="frame" x="20" y="98" width="374" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="bZU-Ad-Fea"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybride"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="8V0-Ty-3jB"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="LyN-a2-Obz" secondAttribute="trailing" id="49C-cI-A84"/>
+                            <constraint firstItem="fQD-aj-hpL" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="10" id="GPG-2U-8Xg"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="LyN-a2-Obz" secondAttribute="bottom" id="bIb-Ru-ATw"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="fQD-aj-hpL" secondAttribute="trailing" constant="20" id="dtB-ui-tQQ"/>
+                            <constraint firstItem="fQD-aj-hpL" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="euY-5b-lwg"/>
+                            <constraint firstItem="LyN-a2-Obz" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="xDV-qe-Hiq"/>
+                            <constraint firstItem="LyN-a2-Obz" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="yUT-5E-HKK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Yxo-D8-7XW"/>
+                    <navigationItem key="navigationItem" id="Yxo-D8-7XW">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="placeholder" id="b3c-Py-XD9">
+                            <connections>
+                                <action selector="getPosition:" destination="8rJ-Kc-sve" id="cEU-hq-WGf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="LyN-a2-Obz" id="jEw-Xb-hyo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -486,6 +514,7 @@
         <image name="callelongue" width="1600" height="1066"/>
         <image name="earth" width="32" height="32"/>
         <image name="list" width="32" height="32"/>
+        <image name="placeholder" width="32" height="32"/>
         <image name="port pin" width="1024" height="684"/>
         <image name="sugiton" width="1600" height="896"/>
     </resources>
