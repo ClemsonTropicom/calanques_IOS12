@@ -19,6 +19,7 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        mapView.setRegion(MKCoordinateRegion(center: calanques[0].coordonnee, latitudinalMeters: CLLocationDistance(exactly: 10000) ?? 10000, longitudinalMeters: CLLocationDistance(exactly: 10000) ?? 10000), animated: true)
         addAnnotations()
 
     }
