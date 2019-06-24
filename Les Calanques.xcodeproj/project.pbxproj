@@ -21,6 +21,7 @@
 		A38DDF1B22C155CA008F9019 /* CalanqueCellAlternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DDF1A22C155CA008F9019 /* CalanqueCellAlternative.swift */; };
 		A38DDF1D22C1602C008F9019 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DDF1C22C1602C008F9019 /* DetailController.swift */; };
 		A38DDF1F22C16951008F9019 /* BoutonArrondi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DDF1E22C16951008F9019 /* BoutonArrondi.swift */; };
+		A38DDF2122C1745C008F9019 /* MonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DDF2022C1745C008F9019 /* MonAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A38DDF1A22C155CA008F9019 /* CalanqueCellAlternative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalanqueCellAlternative.swift; sourceTree = "<group>"; };
 		A38DDF1C22C1602C008F9019 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		A38DDF1E22C16951008F9019 /* BoutonArrondi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonArrondi.swift; sourceTree = "<group>"; };
+		A38DDF2022C1745C008F9019 /* MonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				A38DDF0C22C1433B008F9019 /* Calanque.swift */,
 				A38DDF0E22C14485008F9019 /* CalanqueCollection.swift */,
+				A38DDF2022C1745C008F9019 /* MonAnnotation.swift */,
 			);
 			path = Modele;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				A38DDF1522C145AA008F9019 /* TableViewIntegreController.swift in Sources */,
 				A38DDEF622C13E8F008F9019 /* AppDelegate.swift in Sources */,
 				A38DDF1722C14B18008F9019 /* CalanqueCell.swift in Sources */,
+				A38DDF2122C1745C008F9019 /* MonAnnotation.swift in Sources */,
 				A38DDF0F22C14485008F9019 /* CalanqueCollection.swift in Sources */,
 				A38DDF1F22C16951008F9019 /* BoutonArrondi.swift in Sources */,
 				A38DDF1322C14592008F9019 /* ControllerAvecCarte.swift in Sources */,
