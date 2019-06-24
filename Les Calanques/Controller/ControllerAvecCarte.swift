@@ -19,10 +19,20 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        mapView.setRegion(MKCoordinateRegion(center: calanques[0].coordonnee, latitudinalMeters: CLLocationDistance(exactly: 10000) ?? 10000, longitudinalMeters: CLLocationDistance(exactly: 10000) ?? 10000), animated: true)
+        //mapView.setRegion(MKCoordinateRegion(center: calanques[0].coordonnee, latitudinalMeters: CLLocationDistance(exactly: 10000) ?? 10000, longitudinalMeters: CLLocationDistance(exactly: 10000) ?? 10000), animated: true)
         addAnnotations()
         NotificationCenter.default.addObserver(self, selector: #selector(notifDetail), name: Notification.Name("detail"), object: nil)
+        if calanques.count > 5 {
+            let premiere = calanques[5].coordonnee
+            setupMap(coordonnees: premiere)
+        }
 
+    }
+    
+    func setupMap(coordonnees: CLLocationCoordinate2D){
+        let span = MKCoordinateSpan(latitudeDelta: 0.35, longitudeDelta: 0.35)
+        let region = MKCoordinateRegion(center: coordonnees, span: span)
+        mapView.setRegion(region, animated: true)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
