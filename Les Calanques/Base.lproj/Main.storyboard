@@ -52,6 +52,56 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalanqueCell" rowHeight="177" id="Lz9-fP-EgN" customClass="CalanqueCell" customModule="Les_Calanques" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="177"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lz9-fP-EgN" id="VRP-lT-jiR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="176.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcO-DL-Js3">
+                                            <rect key="frame" x="0.0" y="76.5" width="414" height="100"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LZx-tc-coQ">
+                                                    <rect key="frame" x="150" y="8" width="256" height="84"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="LZx-tc-coQ" secondAttribute="trailing" constant="8" id="HZS-9X-c20"/>
+                                                <constraint firstAttribute="height" constant="100" id="PXT-N3-kct"/>
+                                                <constraint firstAttribute="bottom" secondItem="LZx-tc-coQ" secondAttribute="bottom" constant="8" id="kcy-lv-BrW"/>
+                                                <constraint firstItem="LZx-tc-coQ" firstAttribute="top" secondItem="wcO-DL-Js3" secondAttribute="top" constant="8" id="mCa-dE-tfr"/>
+                                                <constraint firstItem="LZx-tc-coQ" firstAttribute="leading" secondItem="wcO-DL-Js3" secondAttribute="leading" constant="150" id="wFe-f6-QcX"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0z4-IH-Bia" customClass="ImageRonde" customModule="Les_Calanques" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="26" width="125" height="125"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="125" id="M4d-qz-XNr"/>
+                                                <constraint firstAttribute="height" constant="125" id="Xid-4d-T8M"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="wcO-DL-Js3" firstAttribute="leading" secondItem="VRP-lT-jiR" secondAttribute="leading" id="6p4-Yt-zBW"/>
+                                        <constraint firstAttribute="bottom" secondItem="wcO-DL-Js3" secondAttribute="bottom" id="DfF-v9-RwT"/>
+                                        <constraint firstItem="0z4-IH-Bia" firstAttribute="leading" secondItem="VRP-lT-jiR" secondAttribute="leading" constant="8" id="KO7-mt-toF"/>
+                                        <constraint firstAttribute="trailing" secondItem="wcO-DL-Js3" secondAttribute="trailing" id="WpY-AS-fZt"/>
+                                        <constraint firstItem="0z4-IH-Bia" firstAttribute="centerY" secondItem="VRP-lT-jiR" secondAttribute="centerY" id="XyS-gg-r73"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="calanqueIV" destination="0z4-IH-Bia" id="xIe-OJ-N4e"/>
+                                    <outlet property="containerView" destination="wcO-DL-Js3" id="t7n-5O-kNG"/>
+                                    <outlet property="nomLabel" destination="LZx-tc-coQ" id="1vt-Ea-g4A"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="y1W-1a-brr" id="K4X-tv-BN0"/>
@@ -62,7 +112,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F68-gT-yMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="344"/>
+            <point key="canvasLocation" x="747.82608695652175" y="343.52678571428572"/>
         </scene>
         <!--Carte-->
         <scene sceneID="wg7-f3-ORb">
