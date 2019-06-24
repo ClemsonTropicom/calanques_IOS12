@@ -56,15 +56,39 @@
 		A38DDEF422C13E8F008F9019 /* Les Calanques */ = {
 			isa = PBXGroup;
 			children = (
+				A38DDF0922C14289008F9019 /* Modele */,
+				A38DDF0A22C14293008F9019 /* Vue */,
+				A38DDF0B22C1429A008F9019 /* Controller */,
 				A38DDEF522C13E8F008F9019 /* AppDelegate.swift */,
-				A38DDEF722C13E8F008F9019 /* FirstViewController.swift */,
-				A38DDEF922C13E8F008F9019 /* SecondViewController.swift */,
 				A38DDEFB22C13E8F008F9019 /* Main.storyboard */,
 				A38DDEFE22C13E8F008F9019 /* Assets.xcassets */,
 				A38DDF0022C13E8F008F9019 /* LaunchScreen.storyboard */,
 				A38DDF0322C13E8F008F9019 /* Info.plist */,
 			);
 			path = "Les Calanques";
+			sourceTree = "<group>";
+		};
+		A38DDF0922C14289008F9019 /* Modele */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modele;
+			sourceTree = "<group>";
+		};
+		A38DDF0A22C14293008F9019 /* Vue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vue;
+			sourceTree = "<group>";
+		};
+		A38DDF0B22C1429A008F9019 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A38DDEF722C13E8F008F9019 /* FirstViewController.swift */,
+				A38DDEF922C13E8F008F9019 /* SecondViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
