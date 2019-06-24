@@ -21,6 +21,7 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         mapView.setRegion(MKCoordinateRegion(center: calanques[0].coordonnee, latitudinalMeters: CLLocationDistance(exactly: 10000) ?? 10000, longitudinalMeters: CLLocationDistance(exactly: 10000) ?? 10000), animated: true)
         addAnnotations()
+        NotificationCenter.default.addObserver(self, selector: #selector(notifDetail), name: Notification.Name("detail"), object: nil)
 
     }
     
@@ -63,6 +64,14 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
             if let controller = segue.destination as? DetailController {
                 controller.calanqueRecue = sender as? Calanque
             }
+        }
+    }
+    
+    @objc func notifDetail(notification: Notification){
+        
+        if let calanque = notification.object as? Calanque {
+            print("j'ai une calanque")
+            toDetail(calanque: calanque)
         }
     }
     
