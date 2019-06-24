@@ -22,6 +22,7 @@
 		A38DDF1D22C1602C008F9019 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DDF1C22C1602C008F9019 /* DetailController.swift */; };
 		A38DDF1F22C16951008F9019 /* BoutonArrondi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DDF1E22C16951008F9019 /* BoutonArrondi.swift */; };
 		A38DDF2122C1745C008F9019 /* MonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DDF2022C1745C008F9019 /* MonAnnotation.swift */; };
+		A38DDF2322C176EB008F9019 /* MonAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DDF2222C176EB008F9019 /* MonAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A38DDF1C22C1602C008F9019 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		A38DDF1E22C16951008F9019 /* BoutonArrondi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonArrondi.swift; sourceTree = "<group>"; };
 		A38DDF2022C1745C008F9019 /* MonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnnotation.swift; sourceTree = "<group>"; };
+		A38DDF2222C176EB008F9019 /* MonAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A38DDF1822C14EE5008F9019 /* ImageRonde.swift */,
 				A38DDF1A22C155CA008F9019 /* CalanqueCellAlternative.swift */,
 				A38DDF1E22C16951008F9019 /* BoutonArrondi.swift */,
+				A38DDF2222C176EB008F9019 /* MonAnnotationView.swift */,
 			);
 			path = Vue;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				A38DDF1122C1457C008F9019 /* ControllerAvecTableView.swift in Sources */,
 				A38DDF1922C14EE5008F9019 /* ImageRonde.swift in Sources */,
 				A38DDF1D22C1602C008F9019 /* DetailController.swift in Sources */,
+				A38DDF2322C176EB008F9019 /* MonAnnotationView.swift in Sources */,
 				A38DDF0D22C1433B008F9019 /* Calanque.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
